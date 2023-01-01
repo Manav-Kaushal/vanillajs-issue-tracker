@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap@3.3.7 CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <!-- External CSS -->
+    <title>JS Issue Tracker By Manav</title>
+  </head>
+  <!-- fetchIssues() is called every time the application loads -->
+  <body onload="fetchIssues()">
+    <section class="container">
+      <h1>JS Issue Tracker <small>By Manav</small></h1>
+
+      <!-- Form To Add An Issue -->
+      <div class="jumbotron">
+        <h3>Add New Issue:</h3>
+        <form id="issueInputForm">
+          <div class="form-group">
+            <label for="issueDescInput">Description</label>
+            <input
+              type="text"
+              class="form-control"
+              id="issueDescInput"
+              placeholder="Describe the issue here"
+              autocomplete="off"
+              required
+              autofocus
+            />
+          </div>
+          <div class="form-group">
+            <label for="severityInput">Severity</label>
+            <select id="issueSeverityInput" class="form-control">
+              <option name="select" value="">Select...</option>
+              <option name="low" value="Low">Low</option>
+              <option name="medium" value="Medium">Medium</option>
+              <option name="high" value="High">High</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="issueAssignedToInput">Assigned To</label>
+            <input
+              type="text"
+              class="form-control"
+              id="issueAssignedToInput"
+              placeholder="Enter responsible here"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+      </div>
+
+      <!-- Issues List Section -->
+      <div class="col-lg-12">
+        <div id="issuesList"></div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>&copy; Manav</p>
+      </div>
+    </section>
+    <!-- JQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Chance JS CDN -->
+    <script src="https://chancejs.com/chance.min.js"></script>
+
+    <!-- Bootstrap JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- External JS -->
+    <script src="./main.js"></script>
+  </body>
+</html>
